@@ -13,6 +13,8 @@ class PostsList: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(PostsListCell.nib)
+            tableView.estimatedRowHeight = 50
+            tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
     

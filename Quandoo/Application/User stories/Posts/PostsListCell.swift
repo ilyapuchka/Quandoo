@@ -12,9 +12,12 @@ final class PostsListCell: UITableViewCell {
     static let reuseIdentifier = R.reuseIdentifier.postsListCell
     static let nib = R.nib.postsListCell
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+    
     func update(withViewModel model: PostsListCellViewModel) {
-        self.textLabel?.text = model.title
-        self.detailTextLabel?.text = model.body
+        self.titleLabel.text = model.title
+        self.bodyLabel.text = model.body
     }
     
 }

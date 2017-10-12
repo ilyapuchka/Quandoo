@@ -13,6 +13,8 @@ class UsersList: UIViewController, SeguePerformer {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(UsersListCell.nib)
+            tableView.estimatedRowHeight = 50
+            tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
     

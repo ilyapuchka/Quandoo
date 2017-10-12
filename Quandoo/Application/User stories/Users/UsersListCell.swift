@@ -13,9 +13,16 @@ final class UsersListCell: UITableViewCell {
     static let reuseIdentifier = R.reuseIdentifier.usersListCell
     static let nib = R.nib.usersListCell
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
     func update(withViewModel model: UsersListCellViewModel) {
-        self.textLabel?.text = model.name
-        self.detailTextLabel?.text = model.address
+        self.nameLabel?.text = model.name
+        self.usernameLabel?.text = model.username
+        self.emailLabel?.text = model.email
+        self.addressLabel?.text = model.address
     }
     
 }
