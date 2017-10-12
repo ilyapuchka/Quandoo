@@ -8,7 +8,8 @@
 
 import UIKit
 
-final class PostsListCell: UITableViewCell {
+final class PostsListCell: UITableViewCell, ListCell, UpdatableListCell {
+
     static let reuseIdentifier = R.reuseIdentifier.postsListCell
     static let nib = R.nib.postsListCell
     

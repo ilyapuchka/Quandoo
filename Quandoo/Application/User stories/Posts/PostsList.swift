@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Rswift
 
 class PostsList: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.register(PostsListCell.nib)
+            registerReusableViews(in: tableView)
             tableView.estimatedRowHeight = 50
             tableView.rowHeight = UITableViewAutomaticDimension
         }
@@ -36,41 +37,37 @@ class PostsList: UIViewController {
 
 }
 
-extension PostsList: UITableViewDataSource, UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+extension PostsList: ListView {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let model = model else { return 0 }
-        return model.numberOfPosts()
+        return numberOfRows(in: tableView)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PostsListCell.reuseIdentifier, for: indexPath)!
-        cell.update(withViewModel: model.post(at: indexPath.row)!)
-        return cell
+        return cellForRow(at: indexPath, in: tableView)
     }
     
 }
 
-struct PostsListViewModel {
+struct PostsListViewModel: ListViewModel {
+    typealias Item = PostsListCellViewModel
+    typealias Cell = PostsListCell
+    
     let posts: [PostsListCellViewModel]
     
     init(posts: [Post]) {
         self.posts = posts.map(PostsListCellViewModel.init(post:))
     }
     
-    func numberOfPosts() -> Int {
+    func numberOfRows() -> Int {
         return posts.count
     }
     
-    func post(at index: Int) -> PostsListCellViewModel? {
+    func item(at index: Int) -> Item? {
         guard index < posts.count else { return nil }
         return posts[index]
     }
-    
+
 }
 
 class PostsListDataProvider {

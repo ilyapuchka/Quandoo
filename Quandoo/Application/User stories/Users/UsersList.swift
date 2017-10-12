@@ -12,7 +12,7 @@ class UsersList: UIViewController, SeguePerformer {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.register(UsersListCell.nib)
+            registerReusableViews(in: tableView)
             tableView.estimatedRowHeight = 50
             tableView.rowHeight = UITableViewAutomaticDimension
         }
@@ -42,43 +42,39 @@ class UsersList: UIViewController, SeguePerformer {
 
 }
 
-extension UsersList: UITableViewDataSource, UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+extension UsersList: ListView {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let model = model else { return 0 }
-        return model.numberOfUsers()
+        return numberOfRows(in: tableView)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UsersListCell.reuseIdentifier, for: indexPath)!
-        cell.update(withViewModel: model.user(at: indexPath.row)!)
-        return cell
+        return cellForRow(at: indexPath, in: tableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let flowController = flowController else { return }
-        let user = model.user(at: indexPath.row)!
+        let user = model.item(at: indexPath.row)!
         flowController.showPosts(from: self, userId: user.id, username: user.username)
     }
     
 }
 
-struct UsersListViewModel {
+struct UsersListViewModel: ListViewModel {
+    typealias Item = UsersListCellViewModel
+    typealias Cell = UsersListCell
+
     let users: [UsersListCellViewModel]
     
     init(users: [User]) {
         self.users = users.map(UsersListCellViewModel.init(user:))
     }
     
-    func numberOfUsers() -> Int {
+    func numberOfRows() -> Int {
         return users.count
     }
     
-    func user(at index: Int) -> UsersListCellViewModel? {
+    func item(at index: Int) -> Item? {
         guard index < users.count else { return nil }
         return users[index]
     }

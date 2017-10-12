@@ -9,7 +9,8 @@
 import UIKit
 import Rswift
 
-final class UsersListCell: UITableViewCell {
+final class UsersListCell: UITableViewCell, ListCell, UpdatableListCell {
+
     static let reuseIdentifier = R.reuseIdentifier.usersListCell
     static let nib = R.nib.usersListCell
     
