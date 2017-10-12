@@ -10,9 +10,22 @@
 		6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */; };
 		6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37D1F8FDE51009D1E07 /* ViewController.swift */; };
 		6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3821F8FDE51009D1E07 /* Assets.xcassets */; };
-		6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3901F8FDE52009D1E07 /* QuandooTests.swift */; };
+		6315E3A11F8FDFBB009D1E07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3A01F8FDFBB009D1E07 /* User.swift */; };
+		6315E3A31F8FDFC2009D1E07 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3A21F8FDFC2009D1E07 /* Post.swift */; };
+		6315E3A51F8FE038009D1E07 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3A41F8FE038009D1E07 /* Address.swift */; };
+		6315E3AA1F8FE0F4009D1E07 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3A91F8FE0F4009D1E07 /* User.json */; };
+		6315E3AC1F8FE113009D1E07 /* Post.json in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3AB1F8FE113009D1E07 /* Post.json */; };
+		6315E3B11F8FE170009D1E07 /* Address.json in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3B01F8FE170009D1E07 /* Address.json */; };
 		6315E3B61F8FE4DA009D1E07 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; };
 		6315E3B71F8FE4E9009D1E07 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; };
+		6315E3B91F8FE7C8009D1E07 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3B81F8FE7C8009D1E07 /* UserTests.swift */; };
+		6315E3C41F8FE877009D1E07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3C31F8FE831009D1E07 /* R.generated.swift */; };
+		6315E3C91F8FEA36009D1E07 /* Rswift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6315E3CC1F8FEA69009D1E07 /* Rswift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6315E3CD1F8FEAA7009D1E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E39C1F8FDEE1009D1E07 /* Main.storyboard */; };
+		6315E3CE1F8FEAAA009D1E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */; };
+		63D3B1C61F8FEBC500A4E499 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1C51F8FEBC500A4E499 /* AddressTests.swift */; };
+		63D3B1C81F8FEC7800A4E499 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1C71F8FEC7800A4E499 /* PostTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +38,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6315E3C81F8FEA2D009D1E07 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6315E3C91F8FEA36009D1E07 /* Rswift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6315E3CB1F8FEA5C009D1E07 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6315E3CC1F8FEA69009D1E07 /* Rswift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6315E3781F8FDE51009D1E07 /* Quandoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quandoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,11 +68,20 @@
 		6315E3821F8FDE51009D1E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6315E3871F8FDE51009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuandooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6315E3901F8FDE52009D1E07 /* QuandooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuandooTests.swift; sourceTree = "<group>"; };
 		6315E3921F8FDE52009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6315E39C1F8FDEE1009D1E07 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6315E3A01F8FDFBB009D1E07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6315E3A21F8FDFC2009D1E07 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6315E3A41F8FE038009D1E07 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		6315E3A91F8FE0F4009D1E07 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		6315E3AB1F8FE113009D1E07 /* Post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Post.json; sourceTree = "<group>"; };
+		6315E3B01F8FE170009D1E07 /* Address.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Address.json; sourceTree = "<group>"; };
 		6315E3B51F8FE4DA009D1E07 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		6315E3B81F8FE7C8009D1E07 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		6315E3C31F8FE831009D1E07 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		63D3B1C51F8FEBC500A4E499 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		63D3B1C71F8FEC7800A4E499 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +138,10 @@
 		6315E38F1F8FDE52009D1E07 /* QuandooTests */ = {
 			isa = PBXGroup;
 			children = (
-				6315E3901F8FDE52009D1E07 /* QuandooTests.swift */,
+				6315E3C21F8FE831009D1E07 /* Generated */,
+				6315E3AF1F8FE137009D1E07 /* Application */,
+				6315E3AE1F8FE12C009D1E07 /* Data Access Layer */,
+				6315E3AD1F8FE121009D1E07 /* Domain */,
 				6315E3921F8FDE52009D1E07 /* Info.plist */,
 			);
 			path = QuandooTests;
@@ -113,6 +161,9 @@
 		6315E39E1F8FDEEB009D1E07 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6315E3A01F8FDFBB009D1E07 /* User.swift */,
+				6315E3A21F8FDFC2009D1E07 /* Post.swift */,
+				6315E3A41F8FE038009D1E07 /* Address.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -124,12 +175,55 @@
 			path = "Data Access Layer";
 			sourceTree = "<group>";
 		};
+		6315E3A61F8FE0CA009D1E07 /* Payloads */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3A91F8FE0F4009D1E07 /* User.json */,
+				6315E3AB1F8FE113009D1E07 /* Post.json */,
+				6315E3B01F8FE170009D1E07 /* Address.json */,
+			);
+			path = Payloads;
+			sourceTree = "<group>";
+		};
+		6315E3AD1F8FE121009D1E07 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3A61F8FE0CA009D1E07 /* Payloads */,
+				6315E3B81F8FE7C8009D1E07 /* UserTests.swift */,
+				63D3B1C51F8FEBC500A4E499 /* AddressTests.swift */,
+				63D3B1C71F8FEC7800A4E499 /* PostTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6315E3AE1F8FE12C009D1E07 /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Access Layer";
+			sourceTree = "<group>";
+		};
+		6315E3AF1F8FE137009D1E07 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		6315E3B41F8FE4DA009D1E07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				6315E3B51F8FE4DA009D1E07 /* Rswift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6315E3C21F8FE831009D1E07 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3C31F8FE831009D1E07 /* R.generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +237,7 @@
 				6315E3741F8FDE51009D1E07 /* Sources */,
 				6315E3751F8FDE51009D1E07 /* Frameworks */,
 				6315E3761F8FDE51009D1E07 /* Resources */,
+				6315E3CB1F8FEA5C009D1E07 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -161,6 +256,7 @@
 				6315E3881F8FDE52009D1E07 /* Sources */,
 				6315E3891F8FDE52009D1E07 /* Frameworks */,
 				6315E38A1F8FDE52009D1E07 /* Resources */,
+				6315E3C81F8FEA2D009D1E07 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -188,6 +284,7 @@
 					};
 					6315E38B1F8FDE52009D1E07 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6315E3771F8FDE51009D1E07;
 					};
@@ -217,7 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6315E3CE1F8FEAAA009D1E07 /* LaunchScreen.storyboard in Resources */,
 				6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */,
+				6315E3CD1F8FEAA7009D1E07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +324,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6315E3AA1F8FE0F4009D1E07 /* User.json in Resources */,
+				6315E3B11F8FE170009D1E07 /* Address.json in Resources */,
+				6315E3AC1F8FE113009D1E07 /* Post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +370,9 @@
 			files = (
 				6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */,
 				6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */,
+				6315E3A11F8FDFBB009D1E07 /* User.swift in Sources */,
+				6315E3A31F8FDFC2009D1E07 /* Post.swift in Sources */,
+				6315E3A51F8FE038009D1E07 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */,
+				6315E3B91F8FE7C8009D1E07 /* UserTests.swift in Sources */,
+				6315E3C41F8FE877009D1E07 /* R.generated.swift in Sources */,
+				63D3B1C61F8FEBC500A4E499 /* AddressTests.swift in Sources */,
+				63D3B1C81F8FEC7800A4E499 /* PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +542,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LTD6LARKC;
 				INFOPLIST_FILE = QuandooTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ilya.puchka.QuandooTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quandoo.app/Quandoo";
@@ -451,6 +561,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LTD6LARKC;
 				INFOPLIST_FILE = QuandooTests/Info.plist;
