@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PostRepository {
-    func getPosts(withUserId userId: String, completion: @escaping ([Post]?, Error?) -> Void)
+    func getPosts(withUserId userId: Int, completion: @escaping ([Post]?, Error?) -> Void)
 }

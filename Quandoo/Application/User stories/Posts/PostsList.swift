@@ -16,7 +16,21 @@ class PostsList: UIViewController {
         }
     }
     
-    var model: PostsListViewModel!
+    var dataProvider: PostsListDataProvider!
+    var model: PostsListViewModel! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var userId: Int!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        dataProvider.getUserPosts { [weak self] (posts, error) in
+            self?.model = posts
+        }
+    }
 
 }
 
@@ -42,8 +56,8 @@ extension PostsList: UITableViewDataSource, UITableViewDelegate {
 struct PostsListViewModel {
     let posts: [PostsListCellViewModel]
     
-    init(users: [Post]) {
-        self.posts = users.map(PostsListCellViewModel.init(post:))
+    init(posts: [Post]) {
+        self.posts = posts.map(PostsListCellViewModel.init(post:))
     }
     
     func numberOfPosts() -> Int {
@@ -56,3 +70,22 @@ struct PostsListViewModel {
     }
     
 }
+
+class PostsListDataProvider {
+    
+    let userId: Int
+    let postService: PostService
+    
+    init(userId: Int, postService: PostService) {
+        self.userId = userId
+        self.postService = postService
+    }
+    
+    func getUserPosts(completion: @escaping (PostsListViewModel?, Error?) -> Void) {
+        postService.getPosts(withUserId: userId) { (posts, error) in
+            completion(posts.map(PostsListViewModel.init(posts:)), error)
+        }
+    }
+    
+}
+

@@ -21,12 +21,14 @@ final class UsersListCell: UITableViewCell {
 }
 
 struct UsersListCellViewModel {
+    let id: Int
     let name: String
     let username: String
     let email: String
     let address: String
     
     init(user: User) {
+        self.id = user.id
         self.name = user.name
         self.username = user.username
         self.email = user.email

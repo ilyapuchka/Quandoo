@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersList: UIViewController {
+class UsersList: UIViewController, SeguePerformer {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -16,7 +16,28 @@ class UsersList: UIViewController {
         }
     }
     
-    var model: UsersListViewModel!
+    var dataProvider: UsersListDataProvider!
+    var model: UsersListViewModel! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    weak var flowController: UsersListNavigationController?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        dataProvider.getUsers { [weak self] (users, error) in
+            self?.model = users
+        }
+    }
+    
+    lazy var segueManager: SegueManager = { return SegueManager(viewController: self) }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segueManager.prepare(for: segue)
+    }
+
 }
 
 extension UsersList: UITableViewDataSource, UITableViewDelegate {
@@ -36,6 +57,12 @@ extension UsersList: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let flowController = flowController else { return }
+        let user = model.user(at: indexPath.row)!
+        flowController.showPosts(from: self, userId: user.id, username: user.username)
+    }
+    
 }
 
 struct UsersListViewModel {
@@ -52,6 +79,22 @@ struct UsersListViewModel {
     func user(at index: Int) -> UsersListCellViewModel? {
         guard index < users.count else { return nil }
         return users[index]
+    }
+    
+}
+
+class UsersListDataProvider {
+    
+    let userService: UserService
+    
+    init(userService: UserService) {
+        self.userService = userService
+    }
+    
+    func getUsers(completion: @escaping (UsersListViewModel?, Error?) -> Void) {
+        userService.getUsers { (users, error) in
+            completion(users.map(UsersListViewModel.init(users:)), error)
+        }
     }
     
 }

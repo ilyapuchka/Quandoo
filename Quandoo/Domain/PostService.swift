@@ -16,7 +16,7 @@ class PostService {
         self.postRepository = postRepository
     }
     
-    func getPosts(withUserId userId: String, completion: @escaping ([Post]?, Error?) -> Void) {
+    func getPosts(withUserId userId: Int, completion: @escaping ([Post]?, Error?) -> Void) {
         self.postRepository.getPosts(withUserId: userId, completion: completion)
     }
     

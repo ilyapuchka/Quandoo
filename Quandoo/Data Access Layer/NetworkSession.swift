@@ -18,12 +18,18 @@ extension URLSession: NetworkSession {
             if let data = data {
                 do {
                     let decoded = try JSONDecoder().decode(T.self, from: data)
-                    completion(decoded, data, response, nil)
+                    DispatchQueue.main.async {
+                        completion(decoded, data, response, nil)
+                    }
                 } catch {
-                    completion(nil, data, response, error)
+                    DispatchQueue.main.async {
+                        completion(nil, data, response, error)
+                    }
                 }
             } else {
-                completion(nil, data, response, error)
+                DispatchQueue.main.async {
+                    completion(nil, data, response, error)
+                }
             }
             }.resume()
     }

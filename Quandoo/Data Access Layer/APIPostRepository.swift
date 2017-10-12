@@ -9,10 +9,9 @@
 import Foundation
 
 extension URLRequest {
-    static func postsRequest(userId: String) -> URLRequest {
+    static func postsRequest(userId: Int) -> URLRequest {
         var urlComponents = URLComponents(string: "https://jsonplaceholder.typicode.com/posts")!
-        let userId = userId.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        urlComponents.queryItems?.append(URLQueryItem.init(name: "userId", value: userId))
+        urlComponents.queryItems?.append(URLQueryItem.init(name: "userId", value: String(userId)))
         return URLRequest(url: urlComponents.url!)
     }
 }
@@ -24,7 +23,7 @@ class APIPostRepository: PostRepository {
         self.networkSession = networkSession
     }
     
-    func getPosts(withUserId userId: String, completion: @escaping ([Post]?, Error?) -> Void) {
+    func getPosts(withUserId userId: Int, completion: @escaping ([Post]?, Error?) -> Void) {
         networkSession.request(.postsRequest(userId: userId)) { (posts, _, _ , error) in
             completion(posts, error)
         }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QWC-v9-j9G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users List Navigation Controller-->
+        <scene sceneID="8JA-2f-ZnZ">
+            <objects>
+                <navigationController storyboardIdentifier="UsersListNavigationController" id="QWC-v9-j9G" customClass="UsersListNavigationController" customModule="Quandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mre-W8-7l0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nNa-YB-PRB" kind="relationship" relationship="rootViewController" id="fzM-hT-4SL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7z-Ji-cfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-496" y="-12"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="AVK-TK-UcG">
+            <objects>
+                <viewController storyboardIdentifier="UsersList" id="nNa-YB-PRB" customClass="UsersList" customModule="Quandoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U7L-25-hL2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-KG-oxM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nNa-YB-PRB" id="IwB-oj-o14"/>
+                                    <outlet property="delegate" destination="nNa-YB-PRB" id="i37-Ns-B68"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ixN-KG-oxM" firstAttribute="top" secondItem="ARw-52-sXI" secondAttribute="top" id="cFx-yp-5Lm"/>
+                            <constraint firstItem="ixN-KG-oxM" firstAttribute="leading" secondItem="ARw-52-sXI" secondAttribute="leading" id="lc8-3K-bFE"/>
+                            <constraint firstItem="ixN-KG-oxM" firstAttribute="trailing" secondItem="ARw-52-sXI" secondAttribute="trailing" id="sa0-hH-mu1"/>
+                            <constraint firstItem="ARw-52-sXI" firstAttribute="bottom" secondItem="ixN-KG-oxM" secondAttribute="bottom" id="yA2-Oq-bGa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ARw-52-sXI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Users" id="jvE-XF-fxh"/>
+                    <connections>
+                        <outlet property="tableView" destination="ixN-KG-oxM" id="upp-oL-JH7"/>
+                        <segue destination="NGn-IK-kWx" kind="show" identifier="showPost" id="Dc2-LP-676"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojj-ey-IXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="-12"/>
+        </scene>
+        <!--PostsList-->
+        <scene sceneID="uHY-XM-sAS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Posts" referencedIdentifier="PostsList" id="NGn-IK-kWx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hz-XR-Qcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-29" y="622"/>
+        </scene>
+    </scenes>
+</document>
