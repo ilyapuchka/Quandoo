@@ -26,6 +26,16 @@
 		6315E3CE1F8FEAAA009D1E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */; };
 		63D3B1C61F8FEBC500A4E499 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1C51F8FEBC500A4E499 /* AddressTests.swift */; };
 		63D3B1C81F8FEC7800A4E499 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1C71F8FEC7800A4E499 /* PostTests.swift */; };
+		63D3B1CA1F8FED0D00A4E499 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1C91F8FED0D00A4E499 /* UserService.swift */; };
+		63D3B1CC1F8FED4B00A4E499 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1CB1F8FED4B00A4E499 /* UserRepository.swift */; };
+		63D3B1CE1F8FED9F00A4E499 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1CD1F8FED9F00A4E499 /* PostService.swift */; };
+		63D3B1D01F8FEDD000A4E499 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1CF1F8FEDD000A4E499 /* PostRepository.swift */; };
+		63D3B1D21F8FEE2700A4E499 /* APIUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1D11F8FEE2700A4E499 /* APIUserRepository.swift */; };
+		63D3B1D61F8FEE4200A4E499 /* APIPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1D51F8FEE4200A4E499 /* APIPostRepository.swift */; };
+		63D3B1D81F8FF0BD00A4E499 /* APIUserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1D71F8FF0BD00A4E499 /* APIUserRepositoryTests.swift */; };
+		63D3B1DA1F8FF0CB00A4E499 /* APIPostRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1D91F8FF0CB00A4E499 /* APIPostRepositoryTests.swift */; };
+		63D3B1DC1F8FF4D500A4E499 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */; };
+		63D3B1DF1F8FF67400A4E499 /* FileNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1DE1F8FF67400A4E499 /* FileNetworkSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +92,16 @@
 		6315E3C31F8FE831009D1E07 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		63D3B1C51F8FEBC500A4E499 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		63D3B1C71F8FEC7800A4E499 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
+		63D3B1C91F8FED0D00A4E499 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		63D3B1CB1F8FED4B00A4E499 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		63D3B1CD1F8FED9F00A4E499 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		63D3B1CF1F8FEDD000A4E499 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		63D3B1D11F8FEE2700A4E499 /* APIUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserRepository.swift; sourceTree = "<group>"; };
+		63D3B1D51F8FEE4200A4E499 /* APIPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostRepository.swift; sourceTree = "<group>"; };
+		63D3B1D71F8FF0BD00A4E499 /* APIUserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserRepositoryTests.swift; sourceTree = "<group>"; };
+		63D3B1D91F8FF0CB00A4E499 /* APIPostRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostRepositoryTests.swift; sourceTree = "<group>"; };
+		63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		63D3B1DE1F8FF67400A4E499 /* FileNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNetworkSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +184,10 @@
 				6315E3A01F8FDFBB009D1E07 /* User.swift */,
 				6315E3A21F8FDFC2009D1E07 /* Post.swift */,
 				6315E3A41F8FE038009D1E07 /* Address.swift */,
+				63D3B1C91F8FED0D00A4E499 /* UserService.swift */,
+				63D3B1CB1F8FED4B00A4E499 /* UserRepository.swift */,
+				63D3B1CD1F8FED9F00A4E499 /* PostService.swift */,
+				63D3B1CF1F8FEDD000A4E499 /* PostRepository.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -171,6 +195,9 @@
 		6315E39F1F8FDEF2009D1E07 /* Data Access Layer */ = {
 			isa = PBXGroup;
 			children = (
+				63D3B1D11F8FEE2700A4E499 /* APIUserRepository.swift */,
+				63D3B1D51F8FEE4200A4E499 /* APIPostRepository.swift */,
+				63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */,
 			);
 			path = "Data Access Layer";
 			sourceTree = "<group>";
@@ -199,6 +226,9 @@
 		6315E3AE1F8FE12C009D1E07 /* Data Access Layer */ = {
 			isa = PBXGroup;
 			children = (
+				63D3B1D71F8FF0BD00A4E499 /* APIUserRepositoryTests.swift */,
+				63D3B1D91F8FF0CB00A4E499 /* APIPostRepositoryTests.swift */,
+				63D3B1DD1F8FF66900A4E499 /* Utils */,
 			);
 			path = "Data Access Layer";
 			sourceTree = "<group>";
@@ -224,6 +254,14 @@
 				6315E3C31F8FE831009D1E07 /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		63D3B1DD1F8FF66900A4E499 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B1DE1F8FF67400A4E499 /* FileNetworkSession.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +408,15 @@
 			files = (
 				6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */,
 				6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */,
+				63D3B1CA1F8FED0D00A4E499 /* UserService.swift in Sources */,
+				63D3B1D21F8FEE2700A4E499 /* APIUserRepository.swift in Sources */,
+				63D3B1CE1F8FED9F00A4E499 /* PostService.swift in Sources */,
+				63D3B1D61F8FEE4200A4E499 /* APIPostRepository.swift in Sources */,
+				63D3B1CC1F8FED4B00A4E499 /* UserRepository.swift in Sources */,
 				6315E3A11F8FDFBB009D1E07 /* User.swift in Sources */,
 				6315E3A31F8FDFC2009D1E07 /* Post.swift in Sources */,
+				63D3B1DC1F8FF4D500A4E499 /* NetworkSession.swift in Sources */,
+				63D3B1D01F8FEDD000A4E499 /* PostRepository.swift in Sources */,
 				6315E3A51F8FE038009D1E07 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,7 +427,10 @@
 			files = (
 				6315E3B91F8FE7C8009D1E07 /* UserTests.swift in Sources */,
 				6315E3C41F8FE877009D1E07 /* R.generated.swift in Sources */,
+				63D3B1DF1F8FF67400A4E499 /* FileNetworkSession.swift in Sources */,
 				63D3B1C61F8FEBC500A4E499 /* AddressTests.swift in Sources */,
+				63D3B1D81F8FF0BD00A4E499 /* APIUserRepositoryTests.swift in Sources */,
+				63D3B1DA1F8FF0CB00A4E499 /* APIPostRepositoryTests.swift in Sources */,
 				63D3B1C81F8FEC7800A4E499 /* PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
