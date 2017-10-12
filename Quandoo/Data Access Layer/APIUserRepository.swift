@@ -10,8 +10,7 @@ import Foundation
 
 extension URLRequest {
     static func usersRequest() -> URLRequest {
-        let urlComponents = URLComponents(string: "https://jsonplaceholder.typicode.com/users")!
-        return URLRequest(url: urlComponents.url!)
+        return request(URLComponents().with { $0.path = "/users" })
     }
 }
 

@@ -10,9 +10,10 @@ import Foundation
 
 extension URLRequest {
     static func postsRequest(userId: Int) -> URLRequest {
-        var urlComponents = URLComponents(string: "https://jsonplaceholder.typicode.com/posts")!
-        urlComponents.queryItems?.append(URLQueryItem.init(name: "userId", value: String(userId)))
-        return URLRequest(url: urlComponents.url!)
+        return request(URLComponents().with {
+            $0.path = "/posts"
+            $0.queryItems = ($0.queryItems ?? []) + [URLQueryItem(name: "userId", value: String(userId))]
+        })
     }
 }
 
