@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */; };
+		6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37D1F8FDE51009D1E07 /* ViewController.swift */; };
+		6315E3811F8FDE51009D1E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E37F1F8FDE51009D1E07 /* Main.storyboard */; };
+		6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3821F8FDE51009D1E07 /* Assets.xcassets */; };
+		6315E3861F8FDE51009D1E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */; };
+		6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3901F8FDE52009D1E07 /* QuandooTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6315E38D1F8FDE52009D1E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6315E3701F8FDE51009D1E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6315E3771F8FDE51009D1E07;
+			remoteInfo = Quandoo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6315E3781F8FDE51009D1E07 /* Quandoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quandoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6315E37D1F8FDE51009D1E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6315E3801F8FDE51009D1E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6315E3821F8FDE51009D1E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6315E3851F8FDE51009D1E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6315E3871F8FDE51009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuandooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6315E3901F8FDE52009D1E07 /* QuandooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuandooTests.swift; sourceTree = "<group>"; };
+		6315E3921F8FDE52009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6315E3751F8FDE51009D1E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6315E3891F8FDE52009D1E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6315E36F1F8FDE51009D1E07 = {
+			isa = PBXGroup;
+			children = (
+				6315E37A1F8FDE51009D1E07 /* Quandoo */,
+				6315E38F1F8FDE52009D1E07 /* QuandooTests */,
+				6315E3791F8FDE51009D1E07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6315E3791F8FDE51009D1E07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3781F8FDE51009D1E07 /* Quandoo.app */,
+				6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6315E37A1F8FDE51009D1E07 /* Quandoo */ = {
+			isa = PBXGroup;
+			children = (
+				6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */,
+				6315E37D1F8FDE51009D1E07 /* ViewController.swift */,
+				6315E37F1F8FDE51009D1E07 /* Main.storyboard */,
+				6315E3821F8FDE51009D1E07 /* Assets.xcassets */,
+				6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */,
+				6315E3871F8FDE51009D1E07 /* Info.plist */,
+			);
+			path = Quandoo;
+			sourceTree = "<group>";
+		};
+		6315E38F1F8FDE52009D1E07 /* QuandooTests */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3901F8FDE52009D1E07 /* QuandooTests.swift */,
+				6315E3921F8FDE52009D1E07 /* Info.plist */,
+			);
+			path = QuandooTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6315E3771F8FDE51009D1E07 /* Quandoo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6315E3951F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "Quandoo" */;
+			buildPhases = (
+				6315E3741F8FDE51009D1E07 /* Sources */,
+				6315E3751F8FDE51009D1E07 /* Frameworks */,
+				6315E3761F8FDE51009D1E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quandoo;
+			productName = Quandoo;
+			productReference = 6315E3781F8FDE51009D1E07 /* Quandoo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6315E38B1F8FDE52009D1E07 /* QuandooTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6315E3981F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "QuandooTests" */;
+			buildPhases = (
+				6315E3881F8FDE52009D1E07 /* Sources */,
+				6315E3891F8FDE52009D1E07 /* Frameworks */,
+				6315E38A1F8FDE52009D1E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6315E38E1F8FDE52009D1E07 /* PBXTargetDependency */,
+			);
+			name = QuandooTests;
+			productName = QuandooTests;
+			productReference = 6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6315E3701F8FDE51009D1E07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Ilya Puchka";
+				TargetAttributes = {
+					6315E3771F8FDE51009D1E07 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					6315E38B1F8FDE52009D1E07 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6315E3771F8FDE51009D1E07;
+					};
+				};
+			};
+			buildConfigurationList = 6315E3731F8FDE51009D1E07 /* Build configuration list for PBXProject "Quandoo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6315E36F1F8FDE51009D1E07;
+			productRefGroup = 6315E3791F8FDE51009D1E07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6315E3771F8FDE51009D1E07 /* Quandoo */,
+				6315E38B1F8FDE52009D1E07 /* QuandooTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6315E3761F8FDE51009D1E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6315E3861F8FDE51009D1E07 /* LaunchScreen.storyboard in Resources */,
+				6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */,
+				6315E3811F8FDE51009D1E07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6315E38A1F8FDE52009D1E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6315E3741F8FDE51009D1E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */,
+				6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6315E3881F8FDE52009D1E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6315E38E1F8FDE52009D1E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6315E3771F8FDE51009D1E07 /* Quandoo */;
+			targetProxy = 6315E38D1F8FDE52009D1E07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6315E37F1F8FDE51009D1E07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6315E3801F8FDE51009D1E07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6315E3851F8FDE51009D1E07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6315E3931F8FDE52009D1E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6315E3941F8FDE52009D1E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6315E3961F8FDE52009D1E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LTD6LARKC;
+				INFOPLIST_FILE = Quandoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ilya.puchka.Quandoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6315E3971F8FDE52009D1E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LTD6LARKC;
+				INFOPLIST_FILE = Quandoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ilya.puchka.Quandoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6315E3991F8FDE52009D1E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LTD6LARKC;
+				INFOPLIST_FILE = QuandooTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ilya.puchka.QuandooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quandoo.app/Quandoo";
+			};
+			name = Debug;
+		};
+		6315E39A1F8FDE52009D1E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LTD6LARKC;
+				INFOPLIST_FILE = QuandooTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ilya.puchka.QuandooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quandoo.app/Quandoo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6315E3731F8FDE51009D1E07 /* Build configuration list for PBXProject "Quandoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6315E3931F8FDE52009D1E07 /* Debug */,
+				6315E3941F8FDE52009D1E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6315E3951F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "Quandoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6315E3961F8FDE52009D1E07 /* Debug */,
+				6315E3971F8FDE52009D1E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6315E3981F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "QuandooTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6315E3991F8FDE52009D1E07 /* Debug */,
+				6315E39A1F8FDE52009D1E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6315E3701F8FDE51009D1E07 /* Project object */;
+}
