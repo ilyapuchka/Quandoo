@@ -11,6 +11,8 @@
 		6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37D1F8FDE51009D1E07 /* ViewController.swift */; };
 		6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3821F8FDE51009D1E07 /* Assets.xcassets */; };
 		6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3901F8FDE52009D1E07 /* QuandooTests.swift */; };
+		6315E3B61F8FE4DA009D1E07 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; };
+		6315E3B71F8FE4E9009D1E07 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315E3B51F8FE4DA009D1E07 /* Rswift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 		6315E3921F8FDE52009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6315E39C1F8FDEE1009D1E07 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6315E3B51F8FE4DA009D1E07 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6315E3B71F8FE4E9009D1E07 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6315E3B61F8FE4DA009D1E07 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 				6315E37A1F8FDE51009D1E07 /* Quandoo */,
 				6315E38F1F8FDE52009D1E07 /* QuandooTests */,
 				6315E3791F8FDE51009D1E07 /* Products */,
+				6315E3B41F8FE4DA009D1E07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +124,14 @@
 			path = "Data Access Layer";
 			sourceTree = "<group>";
 		};
+		6315E3B41F8FE4DA009D1E07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6315E3B51F8FE4DA009D1E07 /* Rswift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6315E3951F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "Quandoo" */;
 			buildPhases = (
+				6315E3B21F8FE301009D1E07 /* Run R.swift */,
 				6315E3741F8FDE51009D1E07 /* Sources */,
 				6315E3751F8FDE51009D1E07 /* Frameworks */,
 				6315E3761F8FDE51009D1E07 /* Resources */,
@@ -142,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6315E3981F8FDE52009D1E07 /* Build configuration list for PBXNativeTarget "QuandooTests" */;
 			buildPhases = (
+				6315E3B31F8FE333009D1E07 /* Run R.swift */,
 				6315E3881F8FDE52009D1E07 /* Sources */,
 				6315E3891F8FDE52009D1E07 /* Frameworks */,
 				6315E38A1F8FDE52009D1E07 /* Resources */,
@@ -214,6 +230,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6315E3B21F8FE301009D1E07 /* Run R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"Utils/Rswift/rswift\" generate \"$SRCROOT/$TARGET_NAME/Generated\"";
+		};
+		6315E3B31F8FE333009D1E07 /* Run R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run R.swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"Utils/Rswift/rswift\" generate \"$SRCROOT/$TARGET_NAME/Generated\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6315E3741F8FDE51009D1E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +324,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -334,6 +382,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
