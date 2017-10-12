@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */; };
-		6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37D1F8FDE51009D1E07 /* ViewController.swift */; };
 		6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3821F8FDE51009D1E07 /* Assets.xcassets */; };
 		6315E3A11F8FDFBB009D1E07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3A01F8FDFBB009D1E07 /* User.swift */; };
 		6315E3A31F8FDFC2009D1E07 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3A21F8FDFC2009D1E07 /* Post.swift */; };
@@ -36,6 +35,13 @@
 		63D3B1DA1F8FF0CB00A4E499 /* APIPostRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1D91F8FF0CB00A4E499 /* APIPostRepositoryTests.swift */; };
 		63D3B1DC1F8FF4D500A4E499 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */; };
 		63D3B1DF1F8FF67400A4E499 /* FileNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1DE1F8FF67400A4E499 /* FileNetworkSession.swift */; };
+		63D3B1E61F8FF80D00A4E499 /* UsersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1E51F8FF80D00A4E499 /* UsersList.swift */; };
+		63D3B1E81F8FF84200A4E499 /* UsersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1E71F8FF84200A4E499 /* UsersListCell.swift */; };
+		63D3B1EA1F8FF86900A4E499 /* UsersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D3B1E91F8FF86900A4E499 /* UsersListCell.xib */; };
+		63D3B1ED1F8FF9AA00A4E499 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1EC1F8FF99700A4E499 /* R.generated.swift */; };
+		63D3B1EF1F8FFDAB00A4E499 /* PostsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1EE1F8FFDAB00A4E499 /* PostsList.swift */; };
+		63D3B1F21F8FFDC800A4E499 /* PostsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3B1F01F8FFDC800A4E499 /* PostsListCell.swift */; };
+		63D3B1F31F8FFDC800A4E499 /* PostsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D3B1F11F8FFDC800A4E499 /* PostsListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +80,6 @@
 /* Begin PBXFileReference section */
 		6315E3781F8FDE51009D1E07 /* Quandoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quandoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6315E37D1F8FDE51009D1E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6315E3821F8FDE51009D1E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6315E3871F8FDE51009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuandooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +107,13 @@
 		63D3B1D91F8FF0CB00A4E499 /* APIPostRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPostRepositoryTests.swift; sourceTree = "<group>"; };
 		63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		63D3B1DE1F8FF67400A4E499 /* FileNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNetworkSession.swift; sourceTree = "<group>"; };
+		63D3B1E51F8FF80D00A4E499 /* UsersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersList.swift; sourceTree = "<group>"; };
+		63D3B1E71F8FF84200A4E499 /* UsersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCell.swift; sourceTree = "<group>"; };
+		63D3B1E91F8FF86900A4E499 /* UsersListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListCell.xib; sourceTree = "<group>"; };
+		63D3B1EC1F8FF99700A4E499 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		63D3B1EE1F8FFDAB00A4E499 /* PostsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsList.swift; sourceTree = "<group>"; };
+		63D3B1F01F8FFDC800A4E499 /* PostsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListCell.swift; sourceTree = "<group>"; };
+		63D3B1F11F8FFDC800A4E499 /* PostsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +158,7 @@
 		6315E37A1F8FDE51009D1E07 /* Quandoo */ = {
 			isa = PBXGroup;
 			children = (
+				63D3B1EB1F8FF99700A4E499 /* Generated */,
 				6315E39F1F8FDEF2009D1E07 /* Data Access Layer */,
 				6315E39E1F8FDEEB009D1E07 /* Domain */,
 				6315E39B1F8FDE9D009D1E07 /* Application */,
@@ -171,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */,
-				6315E37D1F8FDE51009D1E07 /* ViewController.swift */,
+				63D3B1E21F8FF7F600A4E499 /* User stories */,
 				6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */,
 				6315E39C1F8FDEE1009D1E07 /* Main.storyboard */,
 			);
@@ -264,6 +277,43 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		63D3B1E21F8FF7F600A4E499 /* User stories */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B1E41F8FF80100A4E499 /* Posts */,
+				63D3B1E31F8FF7FC00A4E499 /* Users */,
+			);
+			path = "User stories";
+			sourceTree = "<group>";
+		};
+		63D3B1E31F8FF7FC00A4E499 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B1E51F8FF80D00A4E499 /* UsersList.swift */,
+				63D3B1E71F8FF84200A4E499 /* UsersListCell.swift */,
+				63D3B1E91F8FF86900A4E499 /* UsersListCell.xib */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		63D3B1E41F8FF80100A4E499 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B1EE1F8FFDAB00A4E499 /* PostsList.swift */,
+				63D3B1F01F8FFDC800A4E499 /* PostsListCell.swift */,
+				63D3B1F11F8FFDC800A4E499 /* PostsListCell.xib */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		63D3B1EB1F8FF99700A4E499 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				63D3B1EC1F8FF99700A4E499 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,7 +402,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D3B1EA1F8FF86900A4E499 /* UsersListCell.xib in Resources */,
 				6315E3CE1F8FEAAA009D1E07 /* LaunchScreen.storyboard in Resources */,
+				63D3B1F31F8FFDC800A4E499 /* PostsListCell.xib in Resources */,
 				6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */,
 				6315E3CD1F8FEAA7009D1E07 /* Main.storyboard in Resources */,
 			);
@@ -406,11 +458,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */,
 				6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */,
+				63D3B1EF1F8FFDAB00A4E499 /* PostsList.swift in Sources */,
+				63D3B1ED1F8FF9AA00A4E499 /* R.generated.swift in Sources */,
+				63D3B1F21F8FFDC800A4E499 /* PostsListCell.swift in Sources */,
 				63D3B1CA1F8FED0D00A4E499 /* UserService.swift in Sources */,
+				63D3B1E81F8FF84200A4E499 /* UsersListCell.swift in Sources */,
 				63D3B1D21F8FEE2700A4E499 /* APIUserRepository.swift in Sources */,
 				63D3B1CE1F8FED9F00A4E499 /* PostService.swift in Sources */,
+				63D3B1E61F8FF80D00A4E499 /* UsersList.swift in Sources */,
 				63D3B1D61F8FEE4200A4E499 /* APIPostRepository.swift in Sources */,
 				63D3B1CC1F8FED4B00A4E499 /* UserRepository.swift in Sources */,
 				6315E3A11F8FDFBB009D1E07 /* User.swift in Sources */,
