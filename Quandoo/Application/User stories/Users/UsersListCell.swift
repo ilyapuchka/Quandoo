@@ -13,10 +13,26 @@ final class UsersListCell: UITableViewCell {
     static let reuseIdentifier = R.reuseIdentifier.usersListCell
     static let nib = R.nib.usersListCell
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.fontStyle = UIFont.title1
+        }
+    }
+    @IBOutlet weak var usernameLabel: UILabel! {
+        didSet {
+            usernameLabel.fontStyle = UIFont.subheadline
+        }
+    }
+    @IBOutlet weak var emailLabel: UILabel! {
+        didSet {
+            emailLabel.fontStyle = UIFont.subheadline
+        }
+    }
+    @IBOutlet weak var addressLabel: UILabel! {
+        didSet {
+            addressLabel.fontStyle = UIFont.title3
+        }
+    }
     
     func update(withViewModel model: UsersListCellViewModel) {
         self.nameLabel?.text = model.name

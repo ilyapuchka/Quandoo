@@ -12,8 +12,16 @@ final class PostsListCell: UITableViewCell {
     static let reuseIdentifier = R.reuseIdentifier.postsListCell
     static let nib = R.nib.postsListCell
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.fontStyle = UIFont.title1
+        }
+    }
+    @IBOutlet weak var bodyLabel: UILabel! {
+        didSet {
+            bodyLabel.fontStyle = UIFont.body
+        }
+    }
     
     func update(withViewModel model: PostsListCellViewModel) {
         self.titleLabel.text = model.title
