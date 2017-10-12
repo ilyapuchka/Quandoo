@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		6315E37C1F8FDE51009D1E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */; };
 		6315E37E1F8FDE51009D1E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E37D1F8FDE51009D1E07 /* ViewController.swift */; };
-		6315E3811F8FDE51009D1E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E37F1F8FDE51009D1E07 /* Main.storyboard */; };
 		6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3821F8FDE51009D1E07 /* Assets.xcassets */; };
-		6315E3861F8FDE51009D1E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */; };
 		6315E3911F8FDE52009D1E07 /* QuandooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315E3901F8FDE52009D1E07 /* QuandooTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,13 +27,13 @@
 		6315E3781F8FDE51009D1E07 /* Quandoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quandoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6315E37D1F8FDE51009D1E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6315E3801F8FDE51009D1E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6315E3821F8FDE51009D1E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6315E3851F8FDE51009D1E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6315E3871F8FDE51009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6315E38C1F8FDE52009D1E07 /* QuandooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuandooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6315E3901F8FDE52009D1E07 /* QuandooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuandooTests.swift; sourceTree = "<group>"; };
 		6315E3921F8FDE52009D1E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6315E39C1F8FDEE1009D1E07 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +75,10 @@
 		6315E37A1F8FDE51009D1E07 /* Quandoo */ = {
 			isa = PBXGroup;
 			children = (
-				6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */,
-				6315E37D1F8FDE51009D1E07 /* ViewController.swift */,
-				6315E37F1F8FDE51009D1E07 /* Main.storyboard */,
+				6315E39F1F8FDEF2009D1E07 /* Data Access Layer */,
+				6315E39E1F8FDEEB009D1E07 /* Domain */,
+				6315E39B1F8FDE9D009D1E07 /* Application */,
 				6315E3821F8FDE51009D1E07 /* Assets.xcassets */,
-				6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */,
 				6315E3871F8FDE51009D1E07 /* Info.plist */,
 			);
 			path = Quandoo;
@@ -94,6 +91,31 @@
 				6315E3921F8FDE52009D1E07 /* Info.plist */,
 			);
 			path = QuandooTests;
+			sourceTree = "<group>";
+		};
+		6315E39B1F8FDE9D009D1E07 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6315E37B1F8FDE51009D1E07 /* AppDelegate.swift */,
+				6315E37D1F8FDE51009D1E07 /* ViewController.swift */,
+				6315E39D1F8FDEE1009D1E07 /* LaunchScreen.storyboard */,
+				6315E39C1F8FDEE1009D1E07 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6315E39E1F8FDEEB009D1E07 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6315E39F1F8FDEF2009D1E07 /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Access Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6315E3861F8FDE51009D1E07 /* LaunchScreen.storyboard in Resources */,
 				6315E3831F8FDE51009D1E07 /* Assets.xcassets in Resources */,
-				6315E3811F8FDE51009D1E07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,25 +241,6 @@
 			targetProxy = 6315E38D1F8FDE52009D1E07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6315E37F1F8FDE51009D1E07 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6315E3801F8FDE51009D1E07 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6315E3841F8FDE51009D1E07 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6315E3851F8FDE51009D1E07 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6315E3931F8FDE52009D1E07 /* Debug */ = {
