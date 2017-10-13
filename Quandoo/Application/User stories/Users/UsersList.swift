@@ -12,7 +12,7 @@ class UsersList: UIViewController, SeguePerformer {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            registerReusableViews(in: tableView)
+            registerReusableViews()
             tableView.estimatedRowHeight = 50
             tableView.rowHeight = UITableViewAutomaticDimension
         }
@@ -45,11 +45,11 @@ class UsersList: UIViewController, SeguePerformer {
 extension UsersList: ListView {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRows(in: tableView)
+        return numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellForRow(at: indexPath, in: tableView)
+        return cellForRow(at: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

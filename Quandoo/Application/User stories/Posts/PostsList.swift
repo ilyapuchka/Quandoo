@@ -13,7 +13,7 @@ class PostsList: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            registerReusableViews(in: tableView)
+            registerReusableViews()
             tableView.estimatedRowHeight = 50
             tableView.rowHeight = UITableViewAutomaticDimension
         }
@@ -39,11 +39,11 @@ class PostsList: UIViewController {
 extension PostsList: ListView {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRows(in: tableView)
+        return numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return cellForRow(at: indexPath, in: tableView)
+        return cellForRow(at: indexPath)
     }
     
 }

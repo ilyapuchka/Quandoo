@@ -43,16 +43,16 @@ extension ListView where
     ViewModel.Cell.NibType.ReusableType == ViewModel.Cell.ReuseableType
 {
     
-    func registerReusableViews(in tableView: UITableView) {
-        tableView.register(ViewModel.Cell.nib)
+    func registerReusableViews() {
+        tableView?.register(ViewModel.Cell.nib)
     }
     
-    func numberOfRows(in tableView: UITableView) -> Int {
+    func numberOfRows() -> Int {
         guard let model = model else { return 0 }
         return model.numberOfRows()
     }
     
-    func cellForRow(at indexPath: IndexPath, in tableView: UITableView) -> ViewModel.Cell.ReuseableType {
+    func cellForRow(at indexPath: IndexPath) -> ViewModel.Cell.ReuseableType {
         let reuseId = ViewModel.Cell.reuseIdentifier
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseId, for: indexPath)!
         cell.update(withViewModel: model.item(at: indexPath.row)!)
