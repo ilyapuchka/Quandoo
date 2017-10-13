@@ -13,7 +13,7 @@ class UsersListNavigationController: UINavigationController {
     weak var usersList: UsersList?
     
     var usersListDataProvider: UsersListDataProvider!
-    var postsListDataProvider: ((Int) -> PostsListDataProvider)!
+    var postsListDataProvider: PostsListDataProvider!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,8 +27,8 @@ class UsersListNavigationController: UINavigationController {
     
     func showPosts(from: UsersList, userId: Int, username: String) {
         from.performSegue(R.segue.usersList.showPost) { segue in
-            segue.destination.dataProvider = self.postsListDataProvider(userId)
-            segue.destination.userId = userId
+            segue.destination.dataProvider = self.postsListDataProvider
+            segue.destination.model = PostsListViewModel(userId: userId, posts: [])
             segue.destination.navigationItem.title = username
         }
     }

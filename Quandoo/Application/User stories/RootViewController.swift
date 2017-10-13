@@ -31,7 +31,7 @@ class RootViewController: UIViewController {
         )
         
         usersListNavigationController?.usersListDataProvider = UsersListDataProvider(userService: userService)
-        usersListNavigationController?.postsListDataProvider = { PostsListDataProvider(userId: $0, postService: postService) }
+        usersListNavigationController?.postsListDataProvider = PostsListDataProvider(postService: postService)
     }
 
 }

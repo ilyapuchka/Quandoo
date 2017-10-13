@@ -21,7 +21,7 @@ class UsersList: UIViewController, SeguePerformer {
     var dataProvider: UsersListDataProvider!
     var model: UsersListViewModel! {
         didSet {
-            tableView.reloadData()
+            tableView?.reloadData()
         }
     }
     weak var flowController: UsersListNavigationController?

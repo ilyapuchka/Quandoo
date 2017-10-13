@@ -22,15 +22,14 @@ class PostsList: UIViewController {
     var dataProvider: PostsListDataProvider!
     var model: PostsListViewModel! {
         didSet {
-            tableView.reloadData()
+            tableView?.reloadData()
         }
     }
-    var userId: Int!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dataProvider.getUserPosts { [weak self] (posts, error) in
+        dataProvider.getUserPosts(userId: model.userId) { [weak self] (posts, error) in
             self?.model = posts
         }
     }
@@ -53,9 +52,11 @@ struct PostsListViewModel: ListViewModel {
     typealias Item = PostsListCellViewModel
     typealias Cell = PostsListCell
     
+    let userId: Int
     let posts: [PostsListCellViewModel]
     
-    init(posts: [Post]) {
+    init(userId: Int, posts: [Post]) {
+        self.userId = userId
         self.posts = posts.map(PostsListCellViewModel.init(post:))
     }
     
@@ -72,17 +73,15 @@ struct PostsListViewModel: ListViewModel {
 
 class PostsListDataProvider {
     
-    let userId: Int
     let postService: PostService
     
-    init(userId: Int, postService: PostService) {
-        self.userId = userId
+    init(postService: PostService) {
         self.postService = postService
     }
     
-    func getUserPosts(completion: @escaping (PostsListViewModel?, Error?) -> Void) {
+    func getUserPosts(userId: Int, completion: @escaping (PostsListViewModel?, Error?) -> Void) {
         postService.getPosts(withUserId: userId) { (posts, error) in
-            completion(posts.map(PostsListViewModel.init(posts:)), error)
+            completion(posts.map({ PostsListViewModel(userId: userId, posts: $0) }), error)
         }
     }
     
