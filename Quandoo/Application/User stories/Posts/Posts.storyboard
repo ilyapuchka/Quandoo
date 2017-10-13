@@ -25,10 +25,15 @@
                                     <outlet property="delegate" destination="Pug-a2-GmW" id="oo4-vG-r93"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-bt-eoL">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FdE-9s-M0o" firstAttribute="leading" secondItem="qfa-ia-AJe" secondAttribute="leading" id="GQB-xf-GH6"/>
+                            <constraint firstItem="ilu-bt-eoL" firstAttribute="centerY" secondItem="WIM-1E-WlI" secondAttribute="centerY" id="XUp-KA-UnD"/>
+                            <constraint firstItem="ilu-bt-eoL" firstAttribute="centerX" secondItem="WIM-1E-WlI" secondAttribute="centerX" id="Z6P-27-BGC"/>
                             <constraint firstItem="qfa-ia-AJe" firstAttribute="bottom" secondItem="FdE-9s-M0o" secondAttribute="bottom" id="eTV-9J-PbI"/>
                             <constraint firstItem="qfa-ia-AJe" firstAttribute="trailing" secondItem="FdE-9s-M0o" secondAttribute="trailing" id="ggA-Wg-eUi"/>
                             <constraint firstItem="FdE-9s-M0o" firstAttribute="top" secondItem="qfa-ia-AJe" secondAttribute="top" id="nsy-ga-xVC"/>
@@ -37,6 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="gd0-gP-evZ"/>
                     <connections>
+                        <outlet property="loadingView" destination="ilu-bt-eoL" id="A5b-6x-lXL"/>
                         <outlet property="tableView" destination="FdE-9s-M0o" id="KMz-CA-Hxb"/>
                     </connections>
                 </viewController>

@@ -32,7 +32,7 @@ protocol ListViewModel {
 
 protocol ListView: UITableViewDataSource, UITableViewDelegate {
     associatedtype ViewModel: ListViewModel
-    var model: ViewModel! { get set }
+    var model: ViewModel { get set }
     var tableView: UITableView! { get }
 }
 
@@ -48,7 +48,6 @@ extension ListView where
     }
     
     func numberOfRows() -> Int {
-        guard let model = model else { return 0 }
         return model.numberOfRows()
     }
     

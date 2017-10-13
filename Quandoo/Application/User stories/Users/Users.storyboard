@@ -41,11 +41,16 @@
                                     <outlet property="delegate" destination="nNa-YB-PRB" id="i37-Ns-B68"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="j9B-8w-FEK">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="j9B-8w-FEK" firstAttribute="centerY" secondItem="U7L-25-hL2" secondAttribute="centerY" id="2Nv-Z7-fgv"/>
                             <constraint firstItem="ixN-KG-oxM" firstAttribute="top" secondItem="ARw-52-sXI" secondAttribute="top" id="cFx-yp-5Lm"/>
                             <constraint firstItem="ixN-KG-oxM" firstAttribute="leading" secondItem="ARw-52-sXI" secondAttribute="leading" id="lc8-3K-bFE"/>
+                            <constraint firstItem="j9B-8w-FEK" firstAttribute="centerX" secondItem="U7L-25-hL2" secondAttribute="centerX" id="nVa-yp-MWZ"/>
                             <constraint firstItem="ixN-KG-oxM" firstAttribute="trailing" secondItem="ARw-52-sXI" secondAttribute="trailing" id="sa0-hH-mu1"/>
                             <constraint firstItem="ARw-52-sXI" firstAttribute="bottom" secondItem="ixN-KG-oxM" secondAttribute="bottom" id="yA2-Oq-bGa"/>
                         </constraints>
@@ -53,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="jvE-XF-fxh"/>
                     <connections>
+                        <outlet property="loadingView" destination="j9B-8w-FEK" id="Qma-Bz-D86"/>
                         <outlet property="tableView" destination="ixN-KG-oxM" id="upp-oL-JH7"/>
                         <segue destination="NGn-IK-kWx" kind="show" identifier="showPost" id="Dc2-LP-676"/>
                     </connections>

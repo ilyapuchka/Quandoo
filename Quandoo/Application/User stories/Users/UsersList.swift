@@ -10,6 +10,7 @@ import UIKit
 
 class UsersList: UIViewController, SeguePerformer {
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             registerReusableViews()
@@ -19,9 +20,16 @@ class UsersList: UIViewController, SeguePerformer {
     }
     
     var dataProvider: UsersListDataProvider!
-    var model: UsersListViewModel! {
+    var model: UsersListViewModel = UsersListViewModel() {
         didSet {
-            tableView?.reloadData()
+            if model.isLoading {
+                loadingView?.startAnimating()
+                tableView?.isHidden = true
+            } else {
+                loadingView?.stopAnimating()
+                tableView?.isHidden = false
+                tableView?.reloadData()
+            }
         }
     }
     weak var flowController: UsersListNavigationController?
@@ -29,8 +37,9 @@ class UsersList: UIViewController, SeguePerformer {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        model.isLoading = true
         dataProvider.getUsers { [weak self] (users, error) in
-            self?.model = users
+            self?.model = users ?? UsersListViewModel()
         }
     }
     
@@ -54,7 +63,7 @@ extension UsersList: ListView {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let flowController = flowController else { return }
-        let user = model.item(at: indexPath.row)!
+        guard let user = model.item(at: indexPath.row) else { return }
         flowController.showPosts(from: self, userId: user.id, username: user.username)
     }
     
@@ -65,8 +74,9 @@ struct UsersListViewModel: ListViewModel {
     typealias Cell = UsersListCell
 
     let users: [UsersListCellViewModel]
+    var isLoading: Bool = false
     
-    init(users: [User]) {
+    init(users: [User] = []) {
         self.users = users.map(UsersListCellViewModel.init(user:))
     }
     

@@ -11,6 +11,7 @@ import Rswift
 
 class PostsList: UIViewController {
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             registerReusableViews()
@@ -20,17 +21,27 @@ class PostsList: UIViewController {
     }
     
     var dataProvider: PostsListDataProvider!
-    var model: PostsListViewModel! {
+    var model: PostsListViewModel = PostsListViewModel() {
         didSet {
-            tableView?.reloadData()
+            if model.isLoading {
+                loadingView?.startAnimating()
+                tableView?.isHidden = true
+            } else {
+                loadingView?.stopAnimating()
+                tableView?.isHidden = false
+                tableView?.reloadData()
+            }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dataProvider.getUserPosts(userId: model.userId) { [weak self] (posts, error) in
-            self?.model = posts
+        model.isLoading = true
+        if let userId = model.userId {
+            dataProvider.getUserPosts(userId: userId) { [weak self] (posts, error) in
+                self?.model = posts ?? PostsListViewModel()
+            }
         }
     }
 
@@ -52,10 +63,11 @@ struct PostsListViewModel: ListViewModel {
     typealias Item = PostsListCellViewModel
     typealias Cell = PostsListCell
     
-    let userId: Int
+    let userId: Int!
     let posts: [PostsListCellViewModel]
+    var isLoading: Bool = false
     
-    init(userId: Int, posts: [Post]) {
+    init(userId: Int! = nil, posts: [Post] = []) {
         self.userId = userId
         self.posts = posts.map(PostsListCellViewModel.init(post:))
     }
