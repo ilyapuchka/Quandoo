@@ -28,3 +28,23 @@ class APIUserRepository: UserRepository {
     }
     
 }
+
+class CachingUserRepository: UserRepository, CacheServer {
+    
+    let repository: UserRepository
+    let store: Store
+    
+    init(repository: UserRepository, store: Store) {
+        self.repository = repository
+        self.store = store
+    }
+    
+    func getUsers(completion: @escaping ([User]?, Error?) -> Void) {
+        let users = Variable<[User]>(
+            get: { return self.store.users },
+            set: { self.store.users = $0 }
+        )
+        serveCached(users, updateCache: { repository.getUsers(completion: $0) }, completion: completion)
+    }
+
+}

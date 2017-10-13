@@ -53,6 +53,7 @@
 		63FF0BC41F901FC900FCC3BD /* NSObject+AssociatedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF0BC31F901FC900FCC3BD /* NSObject+AssociatedValue.swift */; };
 		63FF0BC61F902C6D00FCC3BD /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF0BC51F902C6D00FCC3BD /* ListView.swift */; };
 		63FF0BC81F90344B00FCC3BD /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF0BC71F90344B00FCC3BD /* RequestBuilder.swift */; };
+		63FF0BCA1F9037F900FCC3BD /* CacheServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FF0BC91F9037F900FCC3BD /* CacheServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		63FF0BC31F901FC900FCC3BD /* NSObject+AssociatedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+AssociatedValue.swift"; sourceTree = "<group>"; };
 		63FF0BC51F902C6D00FCC3BD /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		63FF0BC71F90344B00FCC3BD /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		63FF0BC91F9037F900FCC3BD /* CacheServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				63D3B1D51F8FEE4200A4E499 /* APIPostRepository.swift */,
 				63D3B1DB1F8FF4D500A4E499 /* NetworkSession.swift */,
 				63FF0BC71F90344B00FCC3BD /* RequestBuilder.swift */,
+				63FF0BC91F9037F900FCC3BD /* CacheServer.swift */,
 			);
 			path = "Data Access Layer";
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				63D3B1F21F8FFDC800A4E499 /* PostsListCell.swift in Sources */,
 				63D3B1CA1F8FED0D00A4E499 /* UserService.swift in Sources */,
 				63FF0BC41F901FC900FCC3BD /* NSObject+AssociatedValue.swift in Sources */,
+				63FF0BCA1F9037F900FCC3BD /* CacheServer.swift in Sources */,
 				63D3B1E81F8FF84200A4E499 /* UsersListCell.swift in Sources */,
 				63FF0BC61F902C6D00FCC3BD /* ListView.swift in Sources */,
 				63D3B1D21F8FEE2700A4E499 /* APIUserRepository.swift in Sources */,

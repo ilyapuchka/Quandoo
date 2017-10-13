@@ -18,11 +18,17 @@ class RootViewController: UIViewController {
         usersListNavigationController = childViewControllers[0] as? UsersListNavigationController
         
         let urlSession = URLSession.shared
-        let userRepository = APIUserRepository(networkSession: urlSession)
-        let userService = UserService(userRepository: userRepository)
+        let store = Store()
         
-        let postRepository = APIPostRepository(networkSession: urlSession)
-        let postService = PostService(postRepository: postRepository)
+        let userService = UserService(userRepository: CachingUserRepository(
+            repository: APIUserRepository(networkSession: urlSession),
+            store: store)
+        )
+        
+        let postService = PostService(postRepository: CachingPostRepository(
+            repository: APIPostRepository(networkSession: urlSession),
+            store: store)
+        )
         
         usersListNavigationController?.usersListDataProvider = UsersListDataProvider(userService: userService)
         usersListNavigationController?.postsListDataProvider = { PostsListDataProvider(userId: $0, postService: postService) }
