@@ -14,7 +14,12 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // This is the entry point of the app. Dependency injection is performed here in a simple way.
+        // This container is used to separate main storyboard and users list storyboard.
+        // In real life scenario this controller will be probably a subclass of UITabBarController
+        // or some other kind of container
+        
         usersListNavigationController = childViewControllers[0] as? UsersListNavigationController
         
         let urlSession = URLSession.shared
